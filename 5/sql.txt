@@ -1,0 +1,28 @@
+
+
+
+for connection:
+$conn = mysqli_connect(
+"127.0.0.1",
+"root",
+"",
+"student_db",
+3307
+);
+
+if(!$conn)
+{
+ die(mysqli_connect_error());
+}
+
+To create Table
+(Run in localhost/phpmyadmin)
+CREATE DATABASE student_db;
+
+USE student_db;
+
+CREATE TABLE students(
+id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(50),
+email VARCHAR(50)
+);
